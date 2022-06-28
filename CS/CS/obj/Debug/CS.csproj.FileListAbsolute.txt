@@ -1,0 +1,7 @@
+C:\Users\shaoyun\source\repos\CS\CS\bin\Debug\CS.exe.config
+C:\Users\shaoyun\source\repos\CS\CS\bin\Debug\CS.exe
+C:\Users\shaoyun\source\repos\CS\CS\bin\Debug\CS.pdb
+C:\Users\shaoyun\source\repos\CS\CS\obj\Debug\CS.csproj.AssemblyReference.cache
+C:\Users\shaoyun\source\repos\CS\CS\obj\Debug\CS.csproj.CoreCompileInputs.cache
+C:\Users\shaoyun\source\repos\CS\CS\obj\Debug\CS.exe
+C:\Users\shaoyun\source\repos\CS\CS\obj\Debug\CS.pdb
