@@ -337,34 +337,45 @@ class cast
         //}
 
 
-        Dictionary<string, int> id = new Dictionary<string, int>();
-        id.Add("tom", 5515);
-        id.Add("li", 7615);
-        id.Add("po", 135);
-        id.Add("sc", 1545);
+        //Dictionary<string, int> id = new Dictionary<string, int>();
+        //id.Add("tom", 5515);
+        //id.Add("li", 7615);
+        //id.Add("po", 135);
+        //id.Add("sc", 1545);
 
-        bool back = id.ContainsKey("ssd");
+        //bool back = id.ContainsKey("ssd");
 
-        Console.WriteLine(back);
+        //Console.WriteLine(back);
 
-        foreach (KeyValuePair<string, int> x in id)
+        //foreach (KeyValuePair<string, int> x in id)
+        //{
+        //    Console.WriteLine(x);
+        //}
+
+
+        int[] arr = { 5, 6, 3, 5, 98, 9, 7, 4 };
+
+        void InsertSort(int[] a, int n)
         {
-            Console.WriteLine(x);
-        }
-
-
-        void insersort (int []arr,int end)
-        {
-            for(int i = 1;i<end;i++)
-            {
-                if (arr[i] < arr[i - 1])
+            for (int i = 1; i < n; i++)
+            { 
+                int cur = i;
+                while(cur>0&&a[cur]<a[cur-1])//最后一次a[1]与a[0]比,判断条件有先后，必须先判断cur，否则数组越界
                 {
-
+                    int bigger = a[cur - 1];
+                    a[cur - 1] = a[cur];
+                    a[cur] = bigger;
+                    cur--;
                 }
             }
         }
 
+        InsertSort(arr, 8);
 
+        foreach (int o in arr)
+        {
+            Console.WriteLine(o);
+        }
 
 
 
