@@ -353,6 +353,17 @@ class cast
         }
 
 
+        void insersort (int []arr,int end)
+        {
+            for(int i = 1;i<end;i++)
+            {
+                if (arr[i] < arr[i - 1])
+                {
+
+                }
+            }
+        }
+
 
 
 
