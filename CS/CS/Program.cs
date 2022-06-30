@@ -300,43 +300,43 @@ class cast
         //fPS.getValue();
         //rts.getValue();
 
-        ///*快排*/
-        int[] arr = { 5, 6, 3, 5, 98, 9, 7, 4 };
+        /*快排*/
+        //int[] arr = { 5, 6, 3, 5, 98, 9, 7, 4 };
 
-        void swap(ref int a, ref int b)
-        {
-            int temp = a;
-            a = b;
-            b = temp;
-        }
+        //void swap(ref int a, ref int b)
+        //{
+        //    int temp = a;
+        //    a = b;
+        //    b = temp;
+        //}
 
-        void quicksort(int[]nums,int l,int r)
-        {
-            if (l >= r) return;
-            swap(ref nums[l], ref nums[(l + r) / 2]);
-            int left = l, right = r;
-            while (l < r)
-            {
-                while (l < r && nums[r] > nums[left])
-                {
-                    r--;
-                }
-                while (l < r && nums[l] <= nums[left])
-                {
-                    l++;
-                }
-                swap(ref nums[l], ref nums[r]);
-            }
-            swap(ref nums[left], ref nums[l]);
-            quicksort(nums, left, l - 1);
-            quicksort(nums, l + 1, right);
-        }
-        quicksort(arr, 0, 7);
+        //void quicksort(int[] nums, int l, int r)
+        //{
+        //    if (l >= r) return;
+        //    swap(ref nums[l], ref nums[(l + r) / 2]);//随机设定基准到索引left
+        //    int left = l, right = r;
+        //    while (l < r)
+        //    {//右边先走
+        //        while (l < r && nums[r] > nums[left])//nums[left]始终是基准
+        //        {
+        //            r--;
+        //        }
+        //        while (l < r && nums[l] <= nums[left])//这两次循环再次判断l<r是因为l和r在变动
+        //        {
+        //            l++;
+        //        }
+        //        swap(ref nums[l], ref nums[r]);//>基准与<基准值互换
+        //    }//因为l++且r--，所以l=r时跳出循环
+        //    swap(ref nums[left], ref nums[l]);//l=r时，初始索引值与l/r索引值呼唤，实现左边<基准；右边>大于基准
+        //    quicksort(nums, left, l - 1);//递归
+        //    quicksort(nums, l + 1, right);
+        //}
+        //quicksort(arr, 0, 7);
 
-        foreach (int o in arr)
-        {
-            Console.WriteLine(o);
-        }
+        //foreach (int o in arr)
+        //{
+        //    Console.WriteLine(o);
+        //}
 
 
         //Dictionary<string, int> id = new Dictionary<string, int>();
@@ -354,20 +354,20 @@ class cast
         //    Console.WriteLine(x);
         //}
 
-
+        ///*插入排序*/
         //int[] arr = { 5, 6, 3, 5, 98, 9, 7, 4 };
 
         //void InsertSort(int[] a, int n)
         //{
         //    for (int i = 1; i < n; i++)
-        //    { 
+        //    {
         //        int cur = i;
-        //        while(cur>0&&a[cur]<a[cur-1])//最后一次a[1]与a[0]比,判断条件有先后，必须先判断cur，否则数组越界
+        //        int smoller = a[i];
+        //        while (cur > 0 && a[cur] < a[cur - 1])//最后一次a[1]与a[0]比,判断条件有先后，必须先判断cur，否则数组越界
         //        {
-        //            int bigger = a[cur - 1];
-        //            a[cur - 1] = a[cur];
-        //            a[cur] = bigger;
+        //            a[cur] = a[cur - 1];
         //            cur--;
+        //            a[cur] = smoller;
         //        }
         //    }
         //}
@@ -378,6 +378,39 @@ class cast
         //{
         //    Console.WriteLine(o);
         //}
+
+        /*希尔排序*/
+        //int[] arr = { 5, 6, 3, 5, 98, 9, 7, 4 };
+
+        //void ShellSort(int[] arry)
+        //{
+        //    int n = arry.Length;
+        //    for (int gap = n / 2; gap > 0; gap /= 2)
+        //    {
+        //        for (int i = gap; i < n; i++)//每次更新增量gap时，进行排序；gap=1时就是插入排序
+        //        {
+        //            int j = i;//保存当前索引
+        //            int smoller = arry[j];//smoller存储较小值
+        //            if (smoller < arry[j - gap])
+        //            {
+        //                while (j - gap >= 0 && smoller < arry[j - gap])//先判断是否小于0，以免数组越界
+        //                {
+        //                    arry[j] = arry[j - gap];//交换值
+        //                    j -= gap;//j指向同组前一个索引
+        //                    arry[j] = smoller;//交换值
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
+
+        //ShellSort(arr);
+        //foreach (int o in arr)
+        //{
+        //    Console.WriteLine(o);
+        //}
+
+
 
 
 
