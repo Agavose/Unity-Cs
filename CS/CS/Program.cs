@@ -301,40 +301,42 @@ class cast
         //rts.getValue();
 
         ///*快排*/
-        //int[] a = { 5, 6, 3, 5, 98, 9, 7, 4 };
+        int[] arr = { 5, 6, 3, 5, 98, 9, 7, 4 };
 
-        //void QuickSort(int[] arr, int left, int right)
-        //{
-        //    if (left >= right)
-        //        return;
-        //    int low = left;
-        //    int hight = right;
-        //    int temp = arr[left];
-        //    while (low != hight)
-        //    {
-        //        while (arr[hight] >= temp && hight > low)
-        //            hight--;
-        //        while (arr[low] <= temp && hight > low)
-        //            low++;
-        //        if (arr[low] > temp)
-        //        {
-        //            int x = arr[hight];
-        //            arr[hight] = arr[low];
-        //            arr[low] = x;
-        //        }
-        //    }
-        //    arr[left] = a[low];
-        //    a[low] = temp;
-        //    QuickSort(arr, left, low - 1);
-        //    QuickSort(arr, low + 1, right);
-        //}
+        void swap(ref int a, ref int b)
+        {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
 
-        //QuickSort(a, 0, 7);
+        void quicksort(int[]nums,int l,int r)
+        {
+            if (l >= r) return;
+            swap(ref nums[l], ref nums[(l + r) / 2]);
+            int left = l, right = r;
+            while (l < r)
+            {
+                while (l < r && nums[r] > nums[left])
+                {
+                    r--;
+                }
+                while (l < r && nums[l] <= nums[left])
+                {
+                    l++;
+                }
+                swap(ref nums[l], ref nums[r]);
+            }
+            swap(ref nums[left], ref nums[l]);
+            quicksort(nums, left, l - 1);
+            quicksort(nums, l + 1, right);
+        }
+        quicksort(arr, 0, 7);
 
-        //foreach (int o in a)
-        //{
-        //    Console.WriteLine(o);
-        //}
+        foreach (int o in arr)
+        {
+            Console.WriteLine(o);
+        }
 
 
         //Dictionary<string, int> id = new Dictionary<string, int>();
@@ -353,29 +355,29 @@ class cast
         //}
 
 
-        int[] arr = { 5, 6, 3, 5, 98, 9, 7, 4 };
+        //int[] arr = { 5, 6, 3, 5, 98, 9, 7, 4 };
 
-        void InsertSort(int[] a, int n)
-        {
-            for (int i = 1; i < n; i++)
-            { 
-                int cur = i;
-                while(cur>0&&a[cur]<a[cur-1])//最后一次a[1]与a[0]比,判断条件有先后，必须先判断cur，否则数组越界
-                {
-                    int bigger = a[cur - 1];
-                    a[cur - 1] = a[cur];
-                    a[cur] = bigger;
-                    cur--;
-                }
-            }
-        }
+        //void InsertSort(int[] a, int n)
+        //{
+        //    for (int i = 1; i < n; i++)
+        //    { 
+        //        int cur = i;
+        //        while(cur>0&&a[cur]<a[cur-1])//最后一次a[1]与a[0]比,判断条件有先后，必须先判断cur，否则数组越界
+        //        {
+        //            int bigger = a[cur - 1];
+        //            a[cur - 1] = a[cur];
+        //            a[cur] = bigger;
+        //            cur--;
+        //        }
+        //    }
+        //}
 
-        InsertSort(arr, 8);
+        //InsertSort(arr, 8);
 
-        foreach (int o in arr)
-        {
-            Console.WriteLine(o);
-        }
+        //foreach (int o in arr)
+        //{
+        //    Console.WriteLine(o);
+        //}
 
 
 

@@ -12,3 +12,10 @@ D:\Cs\Longway\CS\CS\obj\Debug\CS.csproj.AssemblyReference.cache
 D:\Cs\Longway\CS\CS\obj\Debug\CS.csproj.CoreCompileInputs.cache
 D:\Cs\Longway\CS\CS\obj\Debug\CS.exe
 D:\Cs\Longway\CS\CS\obj\Debug\CS.pdb
+E:\Test\C#\CS\CS\bin\Debug\CS.exe.config
+E:\Test\C#\CS\CS\bin\Debug\CS.exe
+E:\Test\C#\CS\CS\bin\Debug\CS.pdb
+E:\Test\C#\CS\CS\obj\Debug\CS.csproj.AssemblyReference.cache
+E:\Test\C#\CS\CS\obj\Debug\CS.csproj.CoreCompileInputs.cache
+E:\Test\C#\CS\CS\obj\Debug\CS.exe
+E:\Test\C#\CS\CS\obj\Debug\CS.pdb
